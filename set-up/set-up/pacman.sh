@@ -70,6 +70,15 @@ packages=(
 "fd"
 #For power-profiles-daemon
 "python-gobject"
+#QEMU/KVM/VirtManager
+"qmu"
+"virt-manager"
+"virt-viewer"
+"dnsmasq"
+"vde2"
+"bridge-utils"
+"openbsd-netcat"
+"libguestfs"
 )
 
 for package in "${packages[@]}"; do
@@ -81,5 +90,7 @@ done
 sudo systemctl enable --now bluetooth.service
 sudo systemctl enable --now power-profiles-daemon.service
 sudo systemctl enable --now docker.service
+sudo systemctl enable --now libvirtd
+sudo usermod -a -G libvirt $USER
 sudo usermod -a -G docker $USER
 gsettings set org.gnome.desktop.privacy remember-recent-files false
