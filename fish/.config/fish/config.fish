@@ -10,6 +10,7 @@ set -gx TERM xterm-256color
 fish_add_path ~/.config/herd-lite/bin
 
 fish_add_path ~/bin
+fish_add_path ~/go/bin
 
 alias sail='sh $([ -f sail ] && echo sail || echo vendor/bin/sail)'
 
