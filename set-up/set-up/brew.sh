@@ -16,6 +16,7 @@ packages=(
 "btop"
 "fastfetch"
 "obsidian"
+"obs"
 "tree"	
 "vlc"
 "node"
