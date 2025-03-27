@@ -2,51 +2,44 @@
 
 ## Install script for Homebrew under MacOS
 packages=(
-"tmux"
-"nikitabobko/tap/aerospace"
-"font-jetbrains-mono-nerd-font"
-"kitty"
-"firefox"
-"sketchybar"
-"1password"
-"hyperkey"
-"man"
-"stow"
-"neovim"
-"btop"
-"fastfetch"
-"obsidian"
-"obs"
-"tree"	
-"vlc"
-"node"
-"lf"
-"thunderbird"
-"php"
-"composer"
-"docker"
-"docker-compose"
-"fish"
-"starship"
-"spotify"
-"brave-browser"
-"localsend"
-"rectangle"
-"eza"
-"zoxide"
-"zellij"
-# NeoVIM
-"ripgrep"
-"fd"
+  "nikitabobko/tap/aerospace"
+  "sketchybar"
+  "1password"
+  "man"
+  "neovim"
+  "btop"
+  "fastfetch"
+  "obsidian"
+  #"obs"
+  #"tree"
+  "vlc"
+  "node"
+  #"lf"
+  #"thunderbird"
+  #"php"
+  #"composer"
+  #"docker" #install docker desktop via brew install --cask docker
+  #"docker-compose"
+  "fish"
+  "starship"
+  "stow"
+  "spotify"
+  "localsend"
+  #"rectangle"
+  #"eza"
+  #"zoxide"
+  "zellij"
+  "ripgrep"
+  "fd"
+  "fzf"
 )
 
 brew tap localsend/localsend
 brew tap FelixKratz/formulae
 
-
 for package in "${packages[@]}"; do
-	echo "Installing $package"
-	brew install "$package"
+  echo "Installing $package"
+  brew install "$package"
 done
 
 #run post install hooks
