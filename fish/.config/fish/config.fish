@@ -1,13 +1,10 @@
 fish_vi_key_bindings
 
-if test (uname) = "Darwin"
+if test (uname) = Darwin
     set -gx PATH /opt/homebrew/bin $PATH
 end
 
-
 set -gx TERM xterm-256color
-
-fish_add_path ~/.config/herd-lite/bin
 
 fish_add_path ~/bin
 fish_add_path ~/go/bin
@@ -26,11 +23,10 @@ function forward-char-and-accept-autosuggestion-if-at-end
 end
 bind l forward-char-and-accept-autosuggestion-if-at-end
 
-
 function v
-  nvim $argv
+    nvim $argv
 end
 
 function ls
-  eza $argv
+    eza $argv
 end

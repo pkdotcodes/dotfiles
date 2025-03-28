@@ -22,12 +22,12 @@ packages=(
   #"docker-compose"
   "fish"
   "starship"
+  "eza"
+  "zoxide"
   "stow"
   "spotify"
   "localsend"
   #"rectangle"
-  #"eza"
-  #"zoxide"
   "zellij"
   "ripgrep"
   "fd"
@@ -41,6 +41,8 @@ for package in "${packages[@]}"; do
   echo "Installing $package"
   brew install "$package"
 done
+
+brew install --cask karabiner-elements
 
 #run post install hooks
 #defaults write com.apple.dock autohide -bool true; killall Dock
